@@ -1,0 +1,180 @@
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.inner {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header {
+    border-bottom: 1px solid #ddd;
+}
+
+.header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+}
+
+.header .gnb>ul>li>a {
+    display: block;
+    line-height: 120px;
+    white-space: nowrap;
+}
+
+.header .gnb>ul>li ul {
+    display: none;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    z-index: 9;
+    transform: translate(-50%, 0);
+    background: #fff;
+    border-top: 2px solid #333;
+}
+
+.header .gnb>ul>li:hover ul {
+    display: block;
+}
+
+.header .gnb>ul>li ul a {
+    display: block;
+    line-height: 40px;
+    white-space: nowrap;
+    padding: 0 24px;
+    border-bottom: 1px solid #ddd;
+}
+
+.mainVisual {
+    position: relative;
+    background: url(../images/image01.jpg) no-repeat center center/cover;
+    height: calc(100vh - 120px);
+}
+
+.mainVisual .slg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mainVisual .slg h2 {
+    font-size: 64px;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+}
+
+.mainVisual .slg p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.mainInfo {
+    padding: 120px;
+}
+
+.mainInfo .title {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.mainInfo .title h2 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.mainInfo .title p {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.mainInfo .inner {
+    margin-top: 40px;
+    display: flex;
+}
+
+.mainInfo .inner .itm {
+    flex: 1;
+}
+
+.mainInfo .inner .itm .imgBox {
+    overflow: hidden;
+}
+
+.mainInfo .inner .itm .imgBox img {
+    transition: 0.4s;
+}
+
+.mainInfo .inner .itm:hover .imgBox img {
+    transform: scale(1.3);
+}
+
+.mainInfo .inner .itm .txtBox {
+    position: relative;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.mainInfo .inner .itm .txtBox strong {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.mainInfo .inner .itm .txtBox p {
+    margin-top: 16px;
+    line-height: 24px;
+}
+
+.mainBanner {
+    position: relative;
+    background: url(../images/image01.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    height: 400px;
+}
+
+.mainBanner .slg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 1440px;
+    width: 100%;
+}
+
+.mainBanner .slg h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.mainBanner .slg p {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.footer {
+    padding: 80px 0;
+    background-color: bisque;
+}
