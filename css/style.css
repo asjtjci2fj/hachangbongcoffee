@@ -8,6 +8,7 @@ body {
 }
 
 .header {
+    position: relative;
     border-bottom: 1px solid #ddd;
 }
 
@@ -20,7 +21,7 @@ body {
 
 .header .gnb>ul {
     display: flex;
-    gap: 40px;
+    gap: 64px;
 }
 
 .header .gnb>ul>li {
@@ -34,18 +35,18 @@ body {
 }
 
 .header .gnb>ul>li ul {
-    display: none;
     position: absolute;
     top: 120px;
     left: 50%;
     z-index: 9;
+    height: 0;
     transform: translate(-50%, 0);
-    background: #fff;
-    border-top: 2px solid #333;
+    transition: 0.4s;
+    overflow: hidden;
 }
 
-.header .gnb>ul>li:hover ul {
-    display: block;
+.header .gnb:hover>ul>li ul {
+    height: 280px;
 }
 
 .header .gnb>ul>li ul a {
@@ -53,20 +54,64 @@ body {
     line-height: 40px;
     white-space: nowrap;
     padding: 0 24px;
-    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+}
+
+.header .gnb::after {
+    content: "";
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: #fff;
+    z-index: 2;
+
+    transition: 0.4s;
+}
+
+.header .gnb:hover::after {
+    height: 280px;
 }
 
 .mainVisual {
     position: relative;
-    background: url(../images/image01.jpg) no-repeat center center/cover;
-    height: calc(100vh - 120px);
+    /* background: url(../images/image01.jpg) no-repeat center center/cover;
+    height: calc(100vh - 120px); */
 }
+
+.mainVisual .mainVisualSlider .itm {
+    background: #333;
+    height: calc(100vh - 121px);
+}
+
+.mainVisual .mainVisualSlider .itm::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.mainVisual .mainVisualSlider .itm01 {
+    background: url(../images/image01.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .mainVisualSlider .itm02 {
+    background: url(../images/mainImage01.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .mainVisualSlider .itm03 {
+    background: url(../images/mainImage02.jpg) no-repeat center center/cover;
+}
+
 
 .mainVisual .slg {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .mainVisual .slg h2 {
